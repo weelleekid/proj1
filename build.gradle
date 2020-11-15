@@ -35,9 +35,10 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-	tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-	}
+	
+}
+tasks.withType(JavaCompile) {
+    	options.encoding = 'UTF-8'
 }
 
 test {
