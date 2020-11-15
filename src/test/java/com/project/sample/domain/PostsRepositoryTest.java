@@ -31,7 +31,7 @@ public class PostsRepositoryTest {
 
 		//given
 		LocalDateTime now = LocalDateTime.now();
-		postsRepository.save(Posts.builder().title("test").content("content").author("shineest96@gmail.com").build());
+		postsRepository.save(Posts.builder().title("testtest").content("content").author("shineest96@gmail.com").build());
 
 		//when
 		List<Posts> postsList = postsRepository.findAll();
