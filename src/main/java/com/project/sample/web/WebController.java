@@ -13,7 +13,7 @@ import lombok.AllArgsConstructor;
 public class WebController {
 	
 	private PostsService postsService;
-	//»õ·Î¿î ÀÇÁ¸¼º Ãß°¡ ½Ã ÇÁ·ÎÁ§Æ® °»½Å
+	//ìƒˆë¡œìš´ ì˜ì¡´ì„± ì¶”ê°€ ì‹œ í”„ë¡œì íŠ¸ ê°±ì‹ 
 	@GetMapping(value = "/")
 	public String main(Model model) {
 		model.addAttribute("posts", postsService.findAllDesc());

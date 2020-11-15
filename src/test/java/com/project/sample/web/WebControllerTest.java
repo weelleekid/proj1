@@ -23,7 +23,7 @@ public class WebControllerTest {
 		String bodyString = this.restTemplate.getForObject("/",String.class);
 		
 		//then
-		assertThat(bodyString).contains("½ºÇÁ¸µºÎÆ®·Î ½ÃÀÛÇÏ´Â À¥ ¼­ºñ½º");
+		assertThat(bodyString).contains("ìŠ¤í”„ë§ë¶€íŠ¸ë¡œ ì‹œì‘í•˜ëŠ” ì›¹ ì„œë¹„ìŠ¤");
 		
 	}
 	

@@ -19,7 +19,7 @@ public class WebRestController {
 		return "hello";
 	}
 	
-	@PostMapping("/posts") // object Object 오류 -> return 값 설정 => void -> Boolean
+	@PostMapping("/posts") // object Object  -> return value => void -> Boolean
 	public Boolean savePosts(@RequestBody PostsSaveRequestDto dto) {
 		postsService.save(dto);
 		return true;

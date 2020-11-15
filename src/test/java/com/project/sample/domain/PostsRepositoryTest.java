@@ -31,7 +31,7 @@ public class PostsRepositoryTest {
 
 		//given
 		LocalDateTime now = LocalDateTime.now();
-		postsRepository.save(Posts.builder().title("테스트").content("테스트본문").author("shineest96@gmail.com").build());
+		postsRepository.save(Posts.builder().title("test").content("content").author("shineest96@gmail.com").build());
 
 		//when
 		List<Posts> postsList = postsRepository.findAll();
@@ -40,8 +40,8 @@ public class PostsRepositoryTest {
 		Posts posts = postsList.get(0);
 		assertTrue(posts.getCreatedDate().isAfter(now));
 		assertTrue(posts.getModifiedDate().isAfter(now));
-		assertThat(posts.getTitle(),is("테스트"));
-		assertThat(posts.getContent(),is("테스트본문"));
+		assertThat(posts.getTitle(),is("test"));
+		assertThat(posts.getContent(),is("content"));
 		assertThat(posts.getAuthor(),is("shineest96@gmail.com"));
 	}
 }

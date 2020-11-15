@@ -31,9 +31,9 @@ public class PostsServiceTest {
 	@Test
 	public void save() {
 		PostsSaveRequestDto dto = PostsSaveRequestDto.builder()
-				.author("shineest96@gmail.com")
-				.content("test")
 				.title("test")
+				.content("test")
+				.author("shineest96@gmail.com")
 				.build();
 		
 		postsService.save(dto);
