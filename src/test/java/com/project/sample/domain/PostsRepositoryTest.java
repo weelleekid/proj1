@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import java.time.LocalDateTime;
 import java.util.*;
-import org.aspectj.lang.annotation.After;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class PostsRepositoryTest {
 	@Autowired
 	PostsRepository postsRepository;
 	
-	@After(value = "")
+	@AfterAll
 	public void cleanup() {
 		postsRepository.deleteAll();
 	}
