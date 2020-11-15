@@ -37,9 +37,6 @@ dependencies {
 	}
 	
 }
-tasks.withType(Compile) {
-    	options.encoding = 'UTF-8'
-}
 
 test {
 	useJUnitPlatform()
