@@ -23,7 +23,7 @@ public class WebControllerTest {
 		String bodyString = this.restTemplate.getForObject("/",String.class);
 		
 		//then
-		assertThat(bodyString).contains("web service!");
+		assertThat(bodyString).contains("스프링부트로 시작하는 웹 서비스");
 		
 	}
 	
