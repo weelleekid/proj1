@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import java.time.LocalDateTime;
 import java.util.*;
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class PostsRepositoryTest {
 	@Autowired
 	PostsRepository postsRepository;
 	
-	@AfterAll
+	@AfterEach
 	public void cleanup() {
 		postsRepository.deleteAll();
 	}
@@ -31,7 +31,7 @@ public class PostsRepositoryTest {
 
 		//given
 		LocalDateTime now = LocalDateTime.now();
-		postsRepository.save(Posts.builder().title("testtest").content("content").author("shineest96@gmail.com").build());
+		postsRepository.save(Posts.builder().title("test").content("content").author("shineest96@gmail.com").build());
 
 		//when
 		List<Posts> postsList = postsRepository.findAll();
