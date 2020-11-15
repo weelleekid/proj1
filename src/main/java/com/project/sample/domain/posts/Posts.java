@@ -1,12 +1,15 @@
 package com.project.sample.domain.posts;
 
 import javax.persistence.*;
+
+import com.project.sample.domain.BaseTimeEntity;
+
 import lombok.*;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

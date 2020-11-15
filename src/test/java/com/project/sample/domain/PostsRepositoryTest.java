@@ -1,7 +1,9 @@
 package com.project.sample.domain;
 
 import static org.hamcrest.core.Is.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.hamcrest.MatcherAssert.assertThat;
+import java.time.LocalDateTime;
 import java.util.*;
 import org.aspectj.lang.annotation.After;
 import org.junit.jupiter.api.Test;
@@ -28,6 +30,7 @@ public class PostsRepositoryTest {
 	public void call() {
 
 		//given
+		LocalDateTime now = LocalDateTime.now();
 		postsRepository.save(Posts.builder().title("테스트").content("테스트본문").author("shineest96@gmail.com").build());
 
 		//when
@@ -35,7 +38,10 @@ public class PostsRepositoryTest {
 
 		//then
 		Posts posts = postsList.get(0);
+		assertTrue(posts.getCreatedDate().isAfter(now));
+		assertTrue(posts.getModifiedDate().isAfter(now));
 		assertThat(posts.getTitle(),is("테스트"));
 		assertThat(posts.getContent(),is("테스트본문"));
+		assertThat(posts.getAuthor(),is("shineest96@gmail.com"));
 	}
 }
