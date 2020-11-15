@@ -24,6 +24,12 @@ notifications:
     recipients:
       - shineest96@gmail.com 
       
+before_deploy:
+  - zip -r Spring *
+  - mkdir -p deploy
+  - mv Spring.zip deploy/Spring.zip
+
+
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
@@ -53,7 +59,3 @@ deploy:
       branch: master
   
 
-before_deploy:
-  - zip -r Spring *
-  - mkdir -p deploy
-  - mv Spring.zip deploy/Spring.zip
