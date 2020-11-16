@@ -19,10 +19,10 @@ before_install:
   - chmod +x gradlew 
 
 # CI 실행 완료시 메일로 알람
-notifications:
-  email:
-    recipients:
-      - shineest96@gmail.com 
+#notifications:
+#  email:
+#    recipients:
+#      - 
       
 before_deploy:
   - zip -r Spring *
