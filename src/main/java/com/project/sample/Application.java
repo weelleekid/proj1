@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing
 @SpringBootApplication
 public class Application {
-	/*
+	
 	public static final String APPLICATION_LOCATIONS = "spring.config.location="
 			+ "classpath:application.yml,"
 			+ "/app/config/spring/real-application.yml";
@@ -17,9 +17,5 @@ public class Application {
 		new SpringApplicationBuilder(Application.class)
 				.properties(APPLICATION_LOCATIONS)
 				.run(args);
-	}
-	*/
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
 	}
 }
