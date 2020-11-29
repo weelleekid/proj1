@@ -2,13 +2,19 @@
 spring:
   profiles:
     active: local # 기본 환경 선택
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
 # local 환경
 ---
 spring:
   profiles: local
+  datasource:
+    url: 
+      jdbc:h2:mem:testdb
   jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
+  h2:
+    console:
+      enabled: true
