@@ -1,13 +1,13 @@
 var main = {
 	init : function () {
-		var _this = this;
+		let _this = this;
 		$('#btn-save').on('click',function(){
 			_this.save();
 		});
 	},
 	
 	save : function(){
-		var data = {
+		let data = {
 			title : $("#title").val(),
 			author : $('#author').val(),
 			content : $('#content').val()
